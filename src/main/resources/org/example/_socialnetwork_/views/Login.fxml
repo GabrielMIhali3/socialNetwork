@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #E8F5E9 ;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example._socialnetwork_.controller.LoginController">
+   <children>
+      <VBox fx:id="vboxLogin" alignment="CENTER" layoutX="226.0" layoutY="59.0" prefWidth="149.0" spacing="15.0">
+         <children>
+            <!-- Titlul Login -->
+            <Label text="Login" textFill="#37474f">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+
+            <Label text="Username:" textFill="#37474f" />
+            <TextField fx:id="tfUsername" promptText="Enter your username" />
+
+            <Label text="Password:" textFill="#37474f" />
+            <PasswordField fx:id="tfPassword" promptText="Enter your password" />
+
+            <Button onAction="#login" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #2196F3 ; -fx-text-fill: white;" text="Login">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <HBox alignment="TOP_CENTER" prefHeight="11.0" prefWidth="149.0">
+               <children>
+                  <Hyperlink text="Sing up" onAction="#showSinngUpPage"/>
+               </children></HBox>
+         </children>
+      </VBox>
+
+      <VBox fx:id="vboxSingUp" alignment="CENTER" layoutX="226.0" layoutY="28.0" prefWidth="149.0" spacing="10.0" visible="false">
+         <children>
+            <Label text="Sing up" textFill="#37474f">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+
+            <Label text="Username:" textFill="#37474f" />
+            <TextField fx:id="tfUsernameSingUp" promptText="Enter your username" />
+
+            <Label text="Password:" textFill="#37474f" />
+            <PasswordField fx:id="tfPasswordSingUp" promptText="Enter your password" />
+
+            <Label text="First name:" textFill="#37474f" />
+            <TextField fx:id="tfFirstName" promptText="Enter your first name" />
+
+            <Label text="Last name:" textFill="#37474f" />
+            <TextField fx:id="tfLastName" promptText="Enter your last name" />
+
+            <Button prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #2196F3; -fx-text-fill: white;" text="Sing up" onAction="#sindUp">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children></VBox>
+   </children>
+</AnchorPane>

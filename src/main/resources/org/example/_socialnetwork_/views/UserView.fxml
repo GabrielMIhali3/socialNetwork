@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="541.0" prefWidth="849.0" style="-fx-background-color: #eef1f4" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example._socialnetwork_.controller.UserController">
+   <children>
+      <AnchorPane prefHeight="70.0" prefWidth="849.0" style="-fx-background-color: #303444">
+         <children>
+            <HBox alignment="TOP_RIGHT" layoutX="248.0" prefHeight="70.0" prefWidth="601.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="70.0" prefWidth="166.0">
+                     <children>
+                        <Label fx:id="name" text="Mihali Gabriel" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button mnemonicParsing="false" onAction="#logOut" prefHeight="30.0" prefWidth="95.0" styleClass="menu-button-bar" text="Log out" />
+                     </children>
+                  </VBox>
+               </children></HBox>
+            <Label layoutX="14.0" layoutY="16.0" text="Social Network" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane layoutY="70.0" prefHeight="471.0" prefWidth="194.0" style="-fx-background-color: #3c4058">
+         <children>
+            <VBox layoutY="20.0" prefHeight="451.0" prefWidth="194.0" spacing="5">
+               <children>
+                  <Button fx:id="btnFriends" onAction="#showFriendsList" prefHeight="50.0" prefWidth="194.0" styleClass="menu-button" text="Friends" />
+                  <Button onAction="#handleButtonClick" prefHeight="50.0" prefWidth="194.0" styleClass="menu-button" text="Notifications" />
+                  <StackPane prefHeight="50.0" prefWidth="194.0">
+                     <children>
+                        <Button onAction="#showFriendsRequestList" prefHeight="50.0" prefWidth="194.0" styleClass="menu-button" text="Friends requests" />
+                        <AnchorPane fx:id="notificareAnchorPane">
+                           <children>
+                              <Label fx:id="notificariLabel" layoutX="6.0" layoutY="6.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-size: 9px; -fx-padding: 2px 6px; -fx-background-radius: 7px;" text="3">
+                              </Label>
+                           </children>
+                        </AnchorPane>
+
+                     </children>
+                  </StackPane>
+                  <Button onAction="#showMessageFriendsList" prefHeight="50.0" prefWidth="194.0" styleClass="menu-button" text="Messages" />
+                  <Button onAction="#showAddFriends" prefHeight="50.0" prefWidth="194.0" styleClass="menu-button" text="Add friends" />
+               </children>
+            </VBox>
+
+         </children></AnchorPane>
+
+      <AnchorPane fx:id="anchorPaneMain" layoutX="194.0" layoutY="70.0" prefHeight="471.0" prefWidth="655.0">
+         <children>
+            <ScrollPane fx:id="scrollPaneProfiles" layoutX="78.0" layoutY="64.0" prefHeight="407.0" prefWidth="520.0" style="-fx-background-color: #eef1f4" styleClass="scroll-pane">
+               <content>
+                  <VBox fx:id="vBoxProfiles" prefHeight="405.0" prefWidth="500.0" spacing="10" style="-fx-background-color: #eef1f4">
+                     <children>
+
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+
+            <ScrollPane fx:id="scrollPaneFriedsRequests" layoutX="78.0" layoutY="64.0" prefHeight="407.0" prefWidth="520.0" style="-fx-background-color: #eef1f4" styleClass="scroll-pane" visible="false">
+               <content>
+                  <VBox fx:id="vBoxFriendsRequests" prefHeight="405.0" prefWidth="500.0" spacing="10" style="-fx-background-color: #eef1f4">
+                     <children>
+
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+
+            <ScrollPane fx:id="scrollPaneAddFriends" layoutX="78.0" layoutY="64.0" prefHeight="407.0" prefWidth="520.0" style="-fx-background-color: #eef1f4" styleClass="scroll-pane" visible="false">
+               <content>
+                  <VBox fx:id="vBoxAddFriend" prefHeight="405.0" prefWidth="500.0" spacing="10" style="-fx-background-color: #eef1f4">
+                     <children>
+
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+
+            <ScrollPane fx:id="scrollPaneMessageFriends" layoutX="78.0" layoutY="64.0" prefHeight="407.0" prefWidth="520.0" style="-fx-background-color: #eef1f4" styleClass="scroll-pane" visible="false">
+               <content>
+                  <VBox fx:id="vBoxMessageFriend" prefHeight="405.0" prefWidth="500.0" spacing="10" style="-fx-background-color: #eef1f4">
+                     <children>
+
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <TextField layoutX="241.0" layoutY="14.0" prefHeight="25.0" prefWidth="194.0" styleClass="text-field" />
+         </children>
+      </AnchorPane>
+
+   </children>
+</AnchorPane>
